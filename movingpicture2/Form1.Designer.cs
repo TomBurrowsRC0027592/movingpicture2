@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace movingpicture2
 {
@@ -30,71 +31,73 @@ namespace movingpicture2
         /// </summary>
         private void InitializeComponent()
         {
-            this.Right = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.up = new System.Windows.Forms.Button();
-            this.Left = new System.Windows.Forms.Button();
-            this.down = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Right
-            // 
-            this.Right.Location = new System.Drawing.Point(670, 228);
-            this.Right.Name = "Right";
-            this.Right.Size = new System.Drawing.Size(58, 49);
-            this.Right.TabIndex = 1;
-            this.Right.Text = "Right";
-            this.Right.UseVisualStyleBackColor = true;
-            this.Right.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::movingpicture2.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(258, 101);
+            this.pictureBox1.Location = new System.Drawing.Point(153, 103);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(187, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // up
+            // button1
             // 
-            this.up.Location = new System.Drawing.Point(608, 179);
-            this.up.Name = "up";
-            this.up.Size = new System.Drawing.Size(57, 46);
-            this.up.TabIndex = 2;
-            this.up.Text = "Up";
-            this.up.UseVisualStyleBackColor = true;
-            this.up.Click += new System.EventHandler(this.Left_Click);
+            this.button1.Location = new System.Drawing.Point(615, 139);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Up";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Left
+            // button2
             // 
-            this.Left.Location = new System.Drawing.Point(551, 231);
-            this.Left.Name = "Left";
-            this.Left.Size = new System.Drawing.Size(57, 46);
-            this.Left.TabIndex = 3;
-            this.Left.Text = "Left";
-            this.Left.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(520, 197);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Left";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // down
+            // button3
             // 
-            this.down.Location = new System.Drawing.Point(608, 284);
-            this.down.Name = "down";
-            this.down.Size = new System.Drawing.Size(58, 45);
-            this.down.TabIndex = 4;
-            this.down.Text = "Down";
-            this.down.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(712, 197);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Right";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(614, 265);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Down";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.down);
-            this.Controls.Add(this.Left);
-            this.Controls.Add(this.up);
-            this.Controls.Add(this.Right);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -103,18 +106,13 @@ namespace movingpicture2
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Right;
-        private System.Windows.Forms.Button up;
-        private System.Windows.Forms.Button Left;
-        private System.Windows.Forms.Button down;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
     }
 }
 
