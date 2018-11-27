@@ -22,20 +22,25 @@ namespace movingpicture2
             pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 5);
         }
 
-        private void btnbutton2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Location.X > 0)
-            {
-                pictureBox1.Location = new Point(pictureBox1.Location.X - 5, pictureBox1.Location.Y);
-            }
+            pictureBox1.Location = new Point(pictureBox1.Location.X - 30, pictureBox1.Location.Y);
+            await Task.Delay(500);
+            pictureBox1.Location = new Point(pictureBox1.Location.X + 30, pictureBox1.Location.Y);
+            await Task.Delay(500);
         }
                                   
-        private void btnbutton3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Location.X + 5 < ClientRectangle.Width)
+            while (pictureBox1.Location.X + 5 < ClientRectangle.Width - pictureBox1.Width)
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 30, pictureBox1.Location.Y);
+                await Task.Delay(100);
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 30, pictureBox1.Location.Y);
+                await Task.Delay(500);
             }
+            
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
